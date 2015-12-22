@@ -7,8 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="#" class="navbar-brand">Example</a>
 
-<%= yield %>
+				<ul class="nav navbar-nav">
+					
 
+					<li><%= link_to(statuses_path) do %>
+					     <%= t 'navbar.link_home' %>
+					     <% end %> 
+                        </li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="">Inicio</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	<div class="container">
+	   <%= yield %>
+	</div>
 </body>
 </html>
